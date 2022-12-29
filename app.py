@@ -99,8 +99,11 @@ def index():
     else:
         print("else statement executed")
         return render_template('app.html')
-    
 
+@app.route('/reports', methods=['POST', 'GET'])
+def reports():
+    return render_template('reports.html')
+    
 
 if __name__ == '__main__':
     app.run(debug=True)
