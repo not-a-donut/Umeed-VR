@@ -74,16 +74,14 @@ def index():
             if b == user_input:
                 print("Great job!! No corrections required.")
                 computer_response3 = "Greate Job !! No corrections required."
-                return render_template('app.html', user_input=user_input, computer_response1="Bot: " + dic2.get("chatbot").get("response", "NULL"), computer_response2=grammatical_errors, computer_response3=computer_response3, error_count = error_count)
+                return render_template('app.html', user_input=user_input, computer_response1="Bot: " + dic2.get("chatbot").get("response", "NULL"), computer_response2=grammatical_errors, computer_response3=computer_response3)
             else:
                 print("Correct: ", b)
                 computer_response4 = "Correct: " + b
-                return render_template('app.html', user_input=user_input, computer_response1="Bot: " + dic2.get("chatbot").get("response", "NULL"), computer_response2=grammatical_errors, computer_response4=computer_response4, error_count = error_count)
-
+                return render_template('app.html', user_input=user_input, computer_response1="Bot: " + dic2.get("chatbot").get("response", "NULL"), computer_response2=grammatical_errors, computer_response4=computer_response4)
         for i in errors:
             if i != "":
                 error_count += 1
-
         count += 1
 
     else:
