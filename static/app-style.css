@@ -8,7 +8,8 @@ body {
 }
 
 .chat-box {
-    height: 90%;
+    height: 70vh;
+    /* border: 2px solid red; */
     width: 50%;
     /* position: absolute; */
     overflow: hidden;
@@ -27,7 +28,7 @@ body {
     margin: 5rem auto;
     background: #fff;
     border-radius: 15px;
-    visibility: hidden;
+    /* visibility: hidden; */
 }
 
 .chat-box-header {
@@ -36,6 +37,8 @@ body {
     border-top-right-radius: 15px;
     display: flex;
     font-size: 14px;
+    align-items: center;
+    justify-content: center;
     padding: 0.5em 0;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2), 0 -1px 10px rgba(172, 54, 195, 0.3);
@@ -52,14 +55,18 @@ body {
 }
 
 .chat-box-header p {
-    float: right;
-    position: absolute;
-    right: 16px;
+    /* float: right; */
+    /* position: absolute; */
+    /* right: 16px; */
     cursor: pointer;
     height: 50px;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 50px;
     text-align: center;
-    line-height: 3.25;
+    /* line-height: 3.25; */
     margin: 0;
 }
 
@@ -128,6 +135,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* border: 2px solid red; */
+    justify-self: flex-end;
+    align-self: flex-end;
+    margin-top: 1%;
 }
 
 .chat-box-footer button {
@@ -149,6 +160,7 @@ body {
     border-radius: 50px;
     background: whitesmoke;
     margin: 10px;
+    margin-right: 0;
     font-family: ubuntu;
     font-weight: 600;
     color: #444;
@@ -163,9 +175,8 @@ body {
     vertical-align: middle;
     align-items: center;
     justify-content: center;
-    transform: translate(0px, 20px);
     cursor: pointer;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 .chat-button {

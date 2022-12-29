@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-  <link rel="stylesheet" href="app-style.css">
+  <link rel="stylesheet" href="/static/app-style.css">
   <script src="https://kit.fontawesome.com/cbf74a5bf6.js" crossorigin="anonymous"></script>
 </head>
 
@@ -15,59 +15,54 @@
     <div class="chat-box-header">
       <h3>Message Us</h3>
       <p>
-        <i class="fa fa-times"></i>
+        <i class="fa fa-times fa-xl"></i>
       </p>
     </div>
     <div class="chat-box-body">
       <div class="chat-box-body-send">
-        <p>This is my message.</p>
+        <p>{{user_input}}</p>
         <span>12:00</span>
       </div>
       <div class="chat-box-body-receive">
-        <p>This is my message.</p>
+        <p id="response1">{{computer_response1}}</p>
+        <p id="response2">{{computer_response2}}</p>
+        {% if computer_response3 %}
+          <p id="response3">{{computer_response3}}</p>
+        {% else %}
+          <p id="response4">{{computer_response4}}</p>
+        {% endif %}
         <span>12:00</span>
       </div>
-      <div class="chat-box-body-receive">
-        <p>This is my message.</p>
-        <span>12:00</span>
-      </div>
-      <div class="chat-box-body-send">
-        <p>This is my message.</p>
-        <span>12:00</span>
-      </div>
-      <div class="chat-box-body-send">
-        <p>This is my message.</p>
-        <span>12:00</span>
-      </div>
-      <div class="chat-box-body-receive">
-        <p>This is my message.</p>
-        <span>12:00</span>
-      </div>
-      <div class="chat-box-body-receive">
-        <p>This is my message.</p>
-        <span>12:00</span>
-      </div>
-      <div class="chat-box-body-send">
-        <p>This is my message.</p>
-        <span>12:00</span>
-      </div>
+
     </div>
     <form action="" method="POST">
       <div class="chat-box-footer">
         <input placeholder="Enter Your Message" type="text" name="user_input" class="chat-input">
-        <button type="submit" class="send-button"><i class="send far fa-paper-plane"></i></button>
+        <button type="submit" onclick="createDiv()" class="send-button"><i class="send far fa-paper-plane fa-xl"></i></button>
       </div>
     </form>
   </div>
 
 
-  <div class="chat-button">
-    <span></span>
-  </div>
+  <script>
+    function createDiv() {
 
+      console.log("clicked");
+      // Create a new div element
+      var div = document.createElement("div");
+    
+      // Add some text to the div
+      div.innerHTML = "This is a new div element";
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="app-script.js"></script>
+      div.style.border = "2px solid red";
+    
+      // Add the div to the body of the document
+      // div.classList.add("chat-box-body-receive");
+    }
+  </script>
+  <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+  <!-- <script src="/static/app-script.js"></script> -->
+  <script src="/static/charts.js"></script>
 </body>
 
 </html>
