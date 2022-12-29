@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 import requests
 import json
+import spacy
 
 from gingerit.gingerit import GingerIt
 
@@ -28,9 +29,9 @@ def index():
     user_input = ""
     error_count = 0
     count = 0
-    while user_input != "exit":
-        if request.method == 'POST':
-            # global user_input
+    if request.method == 'POST':
+        while user_input != "exit":
+
             user_input = request.form.get("user_input")
             print(user_input)
 
@@ -79,11 +80,10 @@ def index():
                 print("Correct: ", b)
                 computer_response4 = "Correct: " + b
                 return render_template('app.html', user_input=user_input, computer_response1="Bot: " + dic2.get("chatbot").get("response", "NULL"), computer_response2=grammatical_errors, computer_response4=computer_response4, error_count = error_count)
-
+        
         for i in errors:
             if i != "":
                 error_count += 1
-
         count += 1
 
     else:
