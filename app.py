@@ -10,7 +10,7 @@ app = Flask(__name__)
 url = "https://ai-chatbot.p.rapidapi.com/chat/free"
 
 headers = {
-    "X-RapidAPI-Key": "653db342bemsh971c29bdad7f814p178e70jsn2b31538fd4ba",
+    "X-RapidAPI-Key": "b3caf0b64cmsh6348690ff4f7fefp107496jsn5312620da3b5",
     "X-RapidAPI-Host": "ai-chatbot.p.rapidapi.com"
 }
 
