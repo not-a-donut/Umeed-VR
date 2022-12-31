@@ -66,6 +66,8 @@ def index():
 
             errors = []
 
+            devik = len(temp)
+
             for i in range(len(temp)):
                 c = temp[i]
                 print(c.get("message"))
@@ -84,11 +86,11 @@ def index():
             if b == user_input:
                 print("Great job!! No corrections required.")
                 computer_response3 = "Greate Job !! No corrections required."
-                return render_template('app.html', user_input=user_input, computer_response1="Bot: " + dic2.get("chatbot").get("response", "NULL"), computer_response2=grammatical_errors, computer_response3=computer_response3, error_count = error_count, filtered_tokens = filtered_tokens)
+                return render_template('app.html', user_input=user_input, computer_response1="Bot: " + dic2.get("chatbot").get("response", "NULL"), computer_response2=grammatical_errors, computer_response3=computer_response3, error_count = error_count, filtered_tokens = filtered_tokens, devik = devik)
             else:
                 print("Correct: ", b)
                 computer_response4 = "Correct: " + b
-                return render_template('app.html', user_input=user_input, computer_response1="Bot: " + dic2.get("chatbot").get("response", "NULL"), computer_response2=grammatical_errors, computer_response4=computer_response4, error_count = error_count, filtered_tokens = filtered_tokens)
+                return render_template('app.html', user_input=user_input, computer_response1="Bot: " + dic2.get("chatbot").get("response", "NULL"), computer_response2=grammatical_errors, computer_response4=computer_response4, error_count = error_count, filtered_tokens = filtered_tokens, devik = devik)
 
         
         for i in errors:
@@ -99,10 +101,6 @@ def index():
     else:
         print("else statement executed")
         return render_template('app.html')
-
-@app.route('/reports', methods=['POST', 'GET'])
-def reports():
-    return render_template('reports.html')
     
 
 if __name__ == '__main__':

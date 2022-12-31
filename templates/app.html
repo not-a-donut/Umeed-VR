@@ -7,59 +7,85 @@
   <!-- <script src="https://cdn.tailwindcss.com"></script> -->
   <link rel="stylesheet" href="/static/app-style.css">
   <script src="https://kit.fontawesome.com/cbf74a5bf6.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-base.min.js"></script>
+
+  <style>
+    #container {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+
 </head>
 
+
 <body>
-
-  <div class="chat-box">
-    <div class="chat-box-header">
-      <h3>Message Us</h3>
-      <p>
-        <i class="fa fa-times fa-xl"></i>
-      </p>
-    </div>
-    <div class="chat-box-body">
-      <div class="chat-box-body-send">
-        <p>{{user_input}}</p>
-        <span>12:00</span>
+  <div class="section">
+    <div class="chat-box">
+      <div class="chat-box-header">
+        <h3>Message Us</h3>
+        <p>
+          <i class="fa fa-times fa-xl"></i>
+        </p>
       </div>
-      <div class="chat-box-body-receive">
-        <p id="response1">{{computer_response1}}</p>
-        <p id="response2">{{computer_response2}}</p>
+      <div class="chat-box-body">
+        <div class="chat-box-body-send">
+          <p>{{user_input}}</p>
+          <span>12:00</span>
+        </div>
+        <div class="chat-box-body-receive">
+          <p id="response1">{{computer_response1}}</p>
+          <span>12:00</span>
+        </div>
+
+      </div>
+      <form action="" method="POST">
+        <div class="chat-box-footer">
+          <input placeholder="Enter Your Message" type="text" name="user_input" class="chat-input">
+          <button type="submit" onclick="createDiv()" class="send-button"><i
+              class="send far fa-paper-plane fa-xl"></i></button>
+        </div>
+      </form>
+    </div>
+    <div class="errors">
+      <div class="errors-head-container">
+        <span>ERRORS</span>
+        <span>FOUND</span>
+      </div>
+      <div class="errors-bottom-container">
+        <p id="response2" class="error">{{computer_response2}}</p>
+        <div class="line"></div>
         {% if computer_response3 %}
-        <p id="response3">{{computer_response3}}</p>
+        <p id="response3" class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis perspiciatis repellat totam autem pariatur vel blanditiis impedit facilis accusamus culpa expedita soluta suscipit, velit maxime illo eius praesentium, laboriosam assumenda ratione dolorem facere ducimus ex repudiandae? Ut non iusto enim.<p>
         {% else %}
-        <p id="response4">{{computer_response4}}</p>
+        <p id="response4" class="correct">{{computer_response4}}</p>
         {% endif %}
-        <p id="response4">{{filtered_tokens}}</p>
-        <span>12:00</span>
       </div>
-
     </div>
-    <form action="" method="POST">
-      <div class="chat-box-footer">
-        <input placeholder="Enter Your Message" type="text" name="user_input" class="chat-input">
-        <button type="submit" onclick="createDiv()" class="send-button"><i class="send far fa-paper-plane fa-xl"></i></button>
-      </div>
-    </form>
   </div>
 
 
   <script>
-    function createDiv() {
 
-      console.log("clicked");
-      // Create a new div element
-      var div = document.createElement("div");
-    
-      // Add some text to the div
-      div.innerHTML = "This is a new div element";
+    // var count = []
+    // add data
 
-      div.style.border = "2px solid red";
-    
-      // Add the div to the body of the document
-      // div.classList.add("chat-box-body-receive");
+    const count = [];
+    var devik = '{{devik}}';
+    var kavya = Number(devik);
+    count.push(kavya);
+
+    const c = [];
+    for (let i = 0; i < count.length; i++) {
+      const d = [];
+      d.push(i + 1);
+      d.push(count[i]);
+      c.push(d);
     }
+    console.log(c);
+
   </script>
   <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
   <!-- <script src="/static/app-script.js"></script> -->

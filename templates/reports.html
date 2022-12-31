@@ -20,7 +20,23 @@
     <script>
         anychart.onDocumentReady(function () {
 
+            // var count = []
             // add data
+
+            const count = [];
+            count.push("test string")
+
+            const c = [];
+            for (let i = 0; i < count.length; i++) {
+                const d = [];
+                d.push(i + 1);
+                d.push(count[i]);
+                c.push(d);
+            }
+            console.log(c);
+
+
+
             var data = [
                 ["2003", 1, 0, 0],
                 ["2004", 4, 0, 0],

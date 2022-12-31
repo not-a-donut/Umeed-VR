@@ -1,10 +1,72 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway|Ubuntu&display=swap");
 
-body {
+*{
+    
+}
+    body {
     background: #E8EBF5;
     padding: 0;
     margin: 0;
     font-family: Raleway;
+}
+
+.section{
+    display: flex;
+    flex-direction: row;
+    /* border: 2px solid red; */
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.errors{
+    box-sizing: border-box;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #E8EBF5;
+    /* padding: 4rem; */
+    max-width: 25rem;
+    box-shadow: 2px 2px 37px 4px rgba(176,176,176,1);
+    border-radius: 15px;
+}
+
+.errors-bottom-container{
+    background-color: #fff;
+    padding: 2rem 3rem;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.errors-head-container{
+    display: flex;
+    flex-direction: column;
+    background-color: #e57373;
+    box-sizing: border-box;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    padding: 1.5rem 6rem;
+    font-size: 30px;
+    font-weight: bolder;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.line{
+    width: 130%;
+    height: 1px;
+    background-color: rgb(209, 209, 209);
+    border: 0px solid rgb(209, 209, 209);
+    margin: 0.5rem 0;
+    opacity: 50%
 }
 
 .chat-box {
@@ -12,23 +74,23 @@ body {
     /* border: 2px solid red; */
     width: 50%;
     /* position: absolute; */
-    overflow: hidden;
-    display: -webkit-box;
-    display: -ms-flexbox;
+    /* display: -webkit-box; */
+    /* display: -ms-flexbox; */
     display: flex;
     flex-wrap: wrap;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
+    /* -webkit-box-orient: vertical; */
+    /* -webkit-box-direction: normal; */
+    /* -ms-flex-direction: column; */
     flex-direction: column;
     z-index: 15;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.005);
+    box-shadow: 2px 2px 37px 4px rgba(176,176,176,1);
     /* right: 0; */
     /* bottom: 0; */
-    margin: 5rem auto;
     background: #fff;
     border-radius: 15px;
     /* visibility: hidden; */
+    margin: 3rem 4rem;
 }
 
 .chat-box-header {
@@ -43,6 +105,12 @@ body {
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2), 0 -1px 10px rgba(172, 54, 195, 0.3);
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.025);
+}
+
+.correct{
+    font-weight: bold;
+    color: #46b469;
+    text-shadow: 0.1px 0.1px 1px 1px black;
 }
 
 .chat-box-header h3 {
